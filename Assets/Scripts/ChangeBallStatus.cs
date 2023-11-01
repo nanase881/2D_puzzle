@@ -4,17 +4,6 @@ using UnityEngine;
 
 public class ChangeBallStatus : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -32,6 +21,12 @@ public class ChangeBallStatus : MonoBehaviour
             GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.red);
             Vector2 scale = new Vector2(2, 2);
             transform.localScale = scale;
+        }else if(collision.gameObject.CompareTag("red") && gameObject.CompareTag("red"))
+        {
+            Destroy(collision.gameObject);
+            gameObject.tag = "green";
+            GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.green);
+            Vector2 scale = new Vector2(2.5f, 2.5f);
         }
     }
 
