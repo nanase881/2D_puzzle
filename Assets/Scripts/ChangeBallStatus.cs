@@ -23,11 +23,15 @@ public class ChangeBallStatus : MonoBehaviour
             Destroy(collision.gameObject);
             gameObject.tag = "blue";
             GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.blue);
+            Vector2 scale = new Vector2(1.5f,  1.5f);
+            transform.localScale = scale;
         }else if(collision.gameObject.CompareTag("blue") && gameObject.CompareTag("blue"))
         {
             Destroy(collision.gameObject);
             gameObject.tag = "red";
             GetComponent<SpriteRenderer>().material.SetColor("_Color", Color.red);
+            Vector2 scale = new Vector2(2, 2);
+            transform.localScale = scale;
         }
     }
 
