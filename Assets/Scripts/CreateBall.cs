@@ -5,21 +5,28 @@ using UnityEngine;
 public class CreateBall : MonoBehaviour
 {
     public GameObject ballPrefab;
+    private bool ballExist = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Invoke("InstantiateBall", 1.0f);
-            
-        }
-    }
 
     void InstantiateBall()
     {
-        Vector2 pos = new Vector2(0.02f, 3.52f);
-        Instantiate(ballPrefab, pos, Quaternion.identity);
+        if(ballExist == false)
+        {
+            Vector2 pos = new Vector2(0.02f, 3.52f);
+            Instantiate(ballPrefab, pos, Quaternion.identity);
+        }
+        
     }
-  
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        ballExist = false;
+        Invoke("InstantiateBall",  0.5f);
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        ballExist = true;
+    }
+
 }
