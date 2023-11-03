@@ -14,6 +14,12 @@ public class CreateBall : MonoBehaviour
         {
             Vector2 pos = new Vector2(0.02f, 3.52f);
             Instantiate(ballPrefab, pos, Quaternion.identity);
+            //int rnd = Random.Range(1, 100);
+            //switch(rnd % 3)
+            //{
+            //    case 0:
+
+            //}
         }
         
     }
