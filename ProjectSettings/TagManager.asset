@@ -9,6 +9,7 @@ TagManager:
   - red
   - operatable
   - green
+  - Spawn
   layers:
   - Default
   - TransparentFX

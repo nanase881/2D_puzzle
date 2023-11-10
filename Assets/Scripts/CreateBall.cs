@@ -27,6 +27,7 @@ public class CreateBall : MonoBehaviour
     private void OnTriggerStay2D(Collider2D collision)
     {
         ballExist = true;
+
     }
 
 }

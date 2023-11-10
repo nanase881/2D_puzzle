@@ -59,7 +59,9 @@ public class MoveBall : MonoBehaviour
             {
                 rb.gravityScale = 1;
                 rb.tag = firstTag;
+
             }
+
         }
 
         
