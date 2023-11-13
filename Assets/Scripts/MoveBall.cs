@@ -7,6 +7,8 @@ public class MoveBall : MonoBehaviour
     Rigidbody2D rb;
     public float speed = 0.03f;
     private string firstTag;
+    float leftLimit = -3.7f;
+    float rightLimit = 4.2f;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,7 @@ public class MoveBall : MonoBehaviour
         rb.gravityScale = 0;
         Vector2 scale; //Scale of ball(initialize)
         int rnd = Random.Range(1, 100);
+        
 
         switch (rnd % 6)
         {
@@ -64,9 +67,10 @@ public class MoveBall : MonoBehaviour
 
         }
 
-        
+        Vector2 modifiedPos = ballPos;
+        modifiedPos.x = Mathf.Clamp(ballPos.x, leftLimit, rightLimit);
 
-        transform.position = ballPos;
+        transform.position = modifiedPos;
 
     }
 }
