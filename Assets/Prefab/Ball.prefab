@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3516308344392931427}
   - component: {fileID: 439667098575058682}
   - component: {fileID: 4111200821121851789}
+  - component: {fileID: 5217950477334767092}
   m_Layer: 0
   m_Name: Ball
   m_TagString: operatable
@@ -164,3 +165,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   falled: 0
+--- !u!114 &5217950477334767092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3516308344392931438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 838fd9a083dd548e7acbe4f5d971e63f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
